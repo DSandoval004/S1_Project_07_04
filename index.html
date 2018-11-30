@@ -25,57 +25,92 @@
 
 <body>
       <header>
-            <img src="Images/jb_logo.png" alt="Jersey Buoys Surfing School Logo">
-            <div id="headerInfo">
-                  <p>
-                        Jersey Buoys
-                        Owner: Tony Gallo
-
-                        MAILING ADDRESS
-                        141 Hodad Drive
-                        Ocean City, NJ 08226
-
-                        (609) 555-7873
-
-                        gall@example.com/surf
-                  </p>
+            <div id="headerFlex">
+                  <img src="Images/jb_logo.png" alt="Jersey Buoys Surfing School Logo" id="headerImg">
+                  <div id="headerRight">
+                        <div id="headerInfo">
+                              <div class="headerInfo">
+                                    <h2>OWNER</h2>
+                                    <a href="#">
+                                          <p>Tony Gallo</p>
+                                    </a>
+                              </div>
+                              <div class="headerInfo">
+                                    <h2>MAILING ADDRESS</h2>
+                                    <a href="https://www.google.com/maps/search/141+Hodad+Drive+Ocean+City,+NJ+08226/@39.2648972,-74.6129515,17z/data=!3m1!4b1">
+                                          <p>141 Hodad Drive</p>
+                                          <p>Ocean City, NJ 08226</p>
+                                    </a>
+                              </div>
+                              <div class="headerInfo">
+                                    <h2>CONTACT</h2>
+                                    <p>
+                                          <a href="tel:+16095557873">(609) 555-7873</a>
+                                    </p>
+                                    <p>
+                                          <a href="mailto:gall@example.com/surf">gall@example.com/surf</a>
+                                    </p>
+                              </div>
+                        </div>
+                        <nav id="topNavBar">
+                              <div class="topNavFlex" id="NavHome" onmouseout="NavHome()" onmouseover="navHome()">
+                                    <a href="#" id="navHome" class="topNavLinks">
+                                          home
+                                    </a>
+                              </div>
+                              <div class="topNavFlex pullDown" id="NavClasses" onmouseout="NavClasses()" onmouseout="pullUpClasses()"
+                                    onmouseover="pullDownClasses()" onmouseover="navClasses()">
+                                    <a href="#" id="navClasses">
+                                          <p>classes</p>
+                                    </a>
+                                    <ul id="classes" class="hide pullDown">
+                                          <li><a href="#">Intro Surfing</a></li>
+                                          <li><a href="#">Surfing I</a></li>
+                                          <li><a href="#">Surfing II</a></li>
+                                          <li><a href="#">Surfing III</a></li>
+                                          <li><a href="#">Master Surfing</a></li>
+                                    </ul>
+                              </div>
+                              <div class="topNavFlex pullDown" id="NavCamps" onmouseout="NavCamps()" onmouseover="navCamps()">
+                                    <a href="#" id="navCamps">
+                                          <p>camps</p>
+                                    </a>
+                                    <ul id="camps" class="hide pullDown">
+                                          <li><a href="#">1-Day Grommets</a></li>
+                                          <li><a href="#">3-Day Grommets</a></li>
+                                          <li><a href="#">5-Day Grommets</a></li>
+                                          <li><a href="#">Gurfer Weekend</a></li>
+                                          <li><a href="#">Men's Retreat</a></li>
+                                          <li><a href="#">Adult Excursions</a></li>
+                                    </ul>
+                              </div>
+                              <div class="topNavFlex pullDown" id="NavStore" onmouseout="NavStore()" onmouseover="navStore()">
+                                    <a href="#" id="navStore">
+                                          <p>store</p>
+                                    </a>
+                                    <ul id="store" class="hide pullDown">
+                                          <li><a href="#">Gear</a></li>
+                                          <li><a href="#">Quiver</a></li>
+                                          <li><a href="#">Clothing</a></li>
+                                          <li><a href="#">Shopping Car</a></li>
+                                          <li><a href="#">My Account</a></li>
+                                          <li><a href="#">Tracking</a></li>
+                                    </ul>
+                              </div>
+                              <div class="topNavFlex" id="NavBlog" onmouseout="NavBlog()" onmouseover="navBlog()">
+                                    <a href="#" id="navBlog">
+                                          blog
+                                    </a>
+                              </div>
+                              <div class="topNavFlex" id="NavStaff" onmouseout="NavStaff()" onmouseover="navStaff()">
+                                    <a href="#" id="navStaff">
+                                          staff
+                                    </a>
+                              </div>
+                        </nav>
+                  </div>
             </div>
-            <nav id="topNavBar">
-                  <ul>
-                        <li>home</li>
-                        <li>classes
-                              <ul id="classes" class="pullDown hide">
-                                    <li>Intro Surfing</li>
-                                    <li>Surfing I</li>
-                                    <li>Surfing II</li>
-                                    <li>Surfing III</li>
-                                    <li>Master Surfing</li>
-                              </ul>
-                        </li>
-                        <li>camps
-                              <ul id="camps" class="pullDown hide">
-                                    <li>1-Day Grommets</li>
-                                    <li>3-Day Grommets</li>
-                                    <li>5-Day Grommets</li>
-                                    <li>Gurfer Weekend</li>
-                                    <li>Men's Retreat</li>
-                                    <li>Adult Excursions</li>
-                              </ul>
-                        </li>
-                        <li>store
-                              <ul id="store" class="pullDown hide">
-                                    <li>Gear</li>
-                                    <li>Quiver</li>
-                                    <li>Clothing</li>
-                                    <li>Shopping Car</li>
-                                    <li>My Account</li>
-                                    <li>Tracking</li>
-                              </ul>
-                        </li>
-                        <li>blog</li>
-                        <li>staff</li>
-                  </ul>
-            </nav>
+
       </header>
       <article>
             <p>Come enjoy the excitement of riding the waves along the Jersey Shore with Jersey Buoys.
@@ -115,6 +150,7 @@
                   <dt>A collection of surfboards</dt>
             </dl>
       </section>
+      <script src="jb_javaScript.js"></script>
 </body>
 
 </html>

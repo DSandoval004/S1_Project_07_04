@@ -14,3 +14,116 @@
    Jersey Buoys home page
 
 */
+
+/* Header */
+header div#headerFlex {
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    background: linear-gradient(white 75%, blanchedalmond);
+    width: 100%;
+}
+
+div#headerRight {
+    display: -webkit-flex;
+    -webkit-flex-flow: column wrap;
+    -webkit-flex: 2 1 auto;
+    display: flex;
+    flex-flow: column;
+    flex: 2 1 auto;
+    justify-content: space-around;
+    border: 1px solid black;
+    margin: 5px;
+    width: 50%;
+}
+
+div#headerInfo {
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+#headerImg {
+    -webkit-flex: 1 2 auto;
+    flex: 1 2 auto;
+    margin: 5px;
+}
+
+.headerInfo {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+/* Info Boxes */
+header h2 {
+    font-size: 1.75em;
+    padding-bottom: 5px;
+}
+
+header .headerInfo a {
+    color: blue;
+}
+
+header .headerInfo a:hover {
+    text-decoration: underline;
+}
+
+/* Top Navigation Bar */
+#topNavBar {
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.topNavFlex {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+/* Top Nav Drop Down */
+ul.pullDown {
+    float: left;
+    z-index: 1;
+    position: relative;
+}
+
+/* Article */
+
+/* Section */
+
+/* Description List */
+
+/*  
+    =============================== 
+    Mobile Styles: 0px to 480px 
+    ===============================
+*/
+@media only screen and (max-width: 480px) {}
+
+/*  
+    =============================== 
+    Tablet Styles: 481px to 768px 
+    ===============================
+*/
+@media only screen and (min-width: 481px) {}
+
+/*  
+    ================================= 
+    Desktop Styles: 769px and greater 
+    =================================
+*/
+@media only screen and (min-width: 769px) {}
