@@ -19,9 +19,12 @@
 header div#headerFlex {
     display: -webkit-flex;
     display: flex;
+    flex-wrap: wrap;
     flex-flow: row;
     -webkit-flex-flow: row wrap;
     justify-content: space-around;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
     background: linear-gradient(white 75%, blanchedalmond);
     width: 100%;
 }
@@ -90,18 +93,124 @@ header .headerInfo a:hover {
     -webkit-flex: 1 1 auto;
     flex: 1 1 auto;
     text-align: center;
-    padding: 10px;
     border: 1px solid black;
+    position: relative;
+    display: inline-block;
 }
 
 /* Top Nav Drop Down */
-ul.pullDown {
-    float: left;
+.navDropButton {
+    background-color: transparent;
+    padding: 16px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.topNavFlex-content {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    position: relative;
+}
+
+.topNavFlex-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.topNavFlex-content a:hover {
+    background-color: blue;
+    color: white;
+}
+
+.topNavFlex:hover .topNavFlex-content {
+    display: block;
+}
+
+.topNavFlex:hover .navDropButton {
+    background-color: blue;
+    color: white;
+    width: 100%;
+    height: 100%;
 }
 
 /* Article */
+article {
+    display: -webkit-flex;
+    -webkit-flex-flow: column wrap;
+    -webkit-flex: 1 1 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    flex: 1 1 auto;
+    justify-content: space-around;
+
+    width: 100%;
+    height: fit-content;
+
+    font-size: 1.25em;
+    text-indent: 1em;
+}
+
+/* Article Flex */
+#articleTopImage {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin: 5px;
+    height: 100%;
+    max-height: 250px;
+}
+
+#topArticleContent,
+#bottomArticle {
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    -webkit-flex: 1 1 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row;
+    flex: 1 1 auto;
+}
+
+#bottomArticleContent,
+#contentTAC {
+    -webkit-flex: 1 2 auto;
+    flex: 1 2 auto;
+
+    margin: 5px;
+    padding: 5px;
+    width: 33.33%;
+
+    background-image: url(Images/jb_back2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    border: 1px rgb(105, 202, 235) solid;
+    box-shadow: 0 0 25px rgb(105, 202, 235);
+}
+
+#bottomArticleContent p,
+#contentTAC p {
+    padding: 5px;
+    margin-bottom: 5px;
+    line-height: 1.1em;
+}
+
+#bottomArticleImage,
+#imageTAC {
+    -webkit-flex: 2 1 auto;
+    flex: 2 1 auto;
+    margin: 5px;
+    width: 50%;
+    height: 50%;
+}
 
 /* Section */
 
@@ -112,7 +221,21 @@ ul.pullDown {
     Mobile Styles: 0px to 480px 
     ===============================
 */
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
+    html body {
+        width: 100%;
+    }
+
+    div#headerInfo {
+        flex-flow: column;
+        -webkit-flex-flow: column wrap;
+    }
+
+    /* header div#headerFlex {
+        order: 100;
+        -webkit-order: 100;
+    } */
+}
 
 /*  
     =============================== 
