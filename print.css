@@ -1,1 +1,36 @@
 @charset "utf-8";
+
+body {
+    width: 100%;
+    box-shadow: 0 0 0;
+}
+
+.printUnHide {
+    display: block;
+    float: left;
+}
+
+header,
+hr,
+#imageTAC,
+#bottomArticleImage {
+    display: none;
+}
+
+h2 {
+    font-size: 24pt;
+}
+
+p,
+dd,
+dt {
+    font-size: 16pt;
+}
+
+section {
+    page-break-before: left;
+}
+
+dl {
+    page-break-inside: avoid;
+}
