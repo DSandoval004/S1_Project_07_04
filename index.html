@@ -13,9 +13,11 @@
       
           Filename: jb_home.html
          -->
+      <!-- Sets the charset, viewport and the title of the document. -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Jersey Buoys Surfing School</title>
+      <!-- Linked Style Sheets and set them to different media -->
       <link rel="stylesheet" href="reset.css" media="all">
       <link rel="stylesheet" href="basic.css" media="all">
       <link rel="stylesheet" href="grids.css" media="screen">
@@ -24,6 +26,7 @@
 </head>
 
 <body>
+      <!-- Image for mobile viewport and print media, and information for print. -->
       <img src="Images/jb_logo.png" alt="" id="mobileLogo" class="hide">
       <div class="hide printUnHide">
             <p>Jersey Buoys</p>
@@ -36,11 +39,14 @@
             </br>
       </div>
       <header id="header">
+            <!-- NavIcon to display and hide the nav and header information. -->
             <button id="navIcon" class="hide" onclick="navShow()"><img src="Images/jb_navicon.png" alt=""></button>
             <button onclick="navHide()" id="navX" class="hide">X</button>
+            <!-- Holds all the header content. Also the Jersey Buoys Surfing School Logo. -->
             <div id="headerFlex">
                   <img src="Images/jb_logo.png" alt="Jersey Buoys Surfing School Logo" id="headerImg">
                   <div id="headerRight">
+                        <!-- Holds basic Information about the website. -->
                         <div id="headerInfo">
                               <div id="owner" class="headerInfo">
                                     <h2>OWNER</h2>
@@ -65,6 +71,7 @@
                                     </p>
                               </div>
                         </div>
+                        <!-- The Nav Bar to navigate the site, with dropdown items. -->
                         <nav id="topNavBar">
                               <div class="topNavFlex">
                                     <button class="navDropButton">home</button>
