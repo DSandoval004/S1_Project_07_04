@@ -311,22 +311,32 @@ footer hr:after {
         -webkit-flex-flow: column wrap;
     }
 
-    header {
-        order: 99;
-        -webkit-order: 99;
-    }
-
     header div#headerFlex {
         background-image: none;
     }
 
-    #mobileLogo {
-        margin: 5px;
-        display: block;
+    #headerImg,
+    section,
+    div#headerRight,
+    #navX {
+        display: none;
     }
 
-    #headerImg {
-        display: none;
+    #navX,
+    #navXB {
+        margin: 5px;
+        padding: 5px;
+        font-size: 2em;
+        width: 56px;
+        height: 47px;
+        color: rgb(187, 215, 235);
+    }
+
+    #mobileLogo,
+    #navIcon,
+    #navXB {
+        margin: 5px;
+        display: block;
     }
 
     div#headerRight {
@@ -390,6 +400,10 @@ footer hr:after {
     div#headerInfo {
         flex-flow: column;
         -webkit-flex-flow: column wrap;
+    }
+
+    #navIcon {
+        display: none;
     }
 
     #topArticleContent,

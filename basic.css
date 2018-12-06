@@ -43,3 +43,25 @@ a:link {
 h1 {
     font-size: 1.5em;
 }
+
+/* Flex */
+.flexBRow {
+    -webkit-flex-flow: row wrap;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    flex-flow: row;
+    display: flex;
+}
+
+.flexBColumn {
+    -webkit-flex-flow: column wrap;
+    display: -webkit-flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.flexItem11A {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
