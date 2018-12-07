@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* A grid sheet that I made to have all the possible grids up to a denominator of 10. */
 /* Rows */
 .row {
     clear: both;

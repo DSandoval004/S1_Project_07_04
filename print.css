@@ -1,15 +1,18 @@
 @charset "utf-8";
 
+/* A print style sheet to make the page look nicer when it is being printed. */
 body {
     width: 100%;
     box-shadow: 0 0 0;
 }
 
+/* Unhides content when being printed. */
 .printUnHide {
     display: block;
     float: left;
 }
 
+/* Hides content when being printed. */
 header,
 hr,
 #imageTAC,
@@ -17,6 +20,7 @@ hr,
     display: none;
 }
 
+/* Set the header, paragraph, discription defintion, discription term, to a point, cause it is better for printing. */
 h2 {
     font-size: 24pt;
 }
@@ -27,6 +31,7 @@ dt {
     font-size: 16pt;
 }
 
+/* Made the section and discription list have a page break. */
 section {
     page-break-before: left;
 }

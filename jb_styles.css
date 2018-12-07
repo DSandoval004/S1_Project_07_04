@@ -16,6 +16,7 @@
 */
 
 /* Header */
+/* Made the header be a flex container, also made it a flex box, gave it an image as the background, and made it have a width of 100%. */
 header div#headerFlex {
     display: -webkit-flex;
     display: flex;
@@ -32,6 +33,13 @@ header div#headerFlex {
     width: 100%;
 }
 
+/* Seperate the header into two flex boxes so that they grow and shrink together. It splits into a box with content and an image. The one that content is in is also a flexbox that display in columns.  */
+#headerImg {
+    -webkit-flex: 1 2 auto;
+    flex: 1 2 auto;
+    margin: 5px;
+}
+
 div#headerRight {
     display: -webkit-flex;
     -webkit-flex-flow: column wrap;
@@ -46,6 +54,8 @@ div#headerRight {
     width: 50%;
 }
 
+/* Header right flex */
+/* This further divides the header right flex box into 2 flex-box-containers, the info box and the nav bar. */
 div#headerInfo {
     display: -webkit-flex;
     -webkit-flex-flow: row wrap;
@@ -55,12 +65,17 @@ div#headerInfo {
     padding: 5px;
 }
 
-#headerImg {
-    -webkit-flex: 1 2 auto;
-    flex: 1 2 auto;
-    margin: 5px;
+#topNavBar {
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 5px;
 }
 
+/* Info Boxes */
+/* Make each box flex, and have a color background. Gave the h2 a font size of 1.75em, made each link look like links since the basic css page make them look like normal text. */
 .headerInfo {
     -webkit-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -70,7 +85,6 @@ div#headerInfo {
     background-color: rgba(251, 253, 228, 0.3);
 }
 
-/* Info Boxes */
 h2 {
     font-size: 1.75em;
     padding-bottom: 5px;
@@ -85,15 +99,7 @@ header .headerInfo a:hover {
 }
 
 /* Top Navigation Bar */
-#topNavBar {
-    display: -webkit-flex;
-    display: flex;
-    flex-flow: row;
-    -webkit-flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 5px;
-}
-
+/* Sets up the flex for the nav bar items. */
 .topNavFlex {
     -webkit-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -105,6 +111,7 @@ header .headerInfo a:hover {
 }
 
 /* Top Nav Drop Down */
+/* This makes a fancier nav bar by having drop down items. They are buttons, then when hovered over they cause the hiden content to apear as a floated item and change color when hovered over. */
 .navDropButton {
     background-color: transparent;
     padding: 16px;
@@ -146,6 +153,7 @@ header .headerInfo a:hover {
 }
 
 /* Article */
+/* This makes the article semantic a flex-box-container. sets the width to 100%, and the height to fit content, made the font size 11.25em and the text have an indent. */
 article {
     display: -webkit-flex;
     -webkit-flex-flow: column wrap;
@@ -165,14 +173,7 @@ article {
 }
 
 /* Article Flex */
-/* #articleTopImage {
-    -webkit-flex: 1 1 auto;
-    flex: 1 1 auto;
-    margin: 5px;
-    height: 100%;
-    max-height: 250px;
-} */
-
+/* This divides the article into two, the top and the bottom flex-box-container. */
 #topArticleContent,
 #bottomArticle {
     display: -webkit-flex;
@@ -202,13 +203,7 @@ article {
     box-shadow: 0 0 25px rgb(105, 202, 235);
 }
 
-#bottomArticleContent p,
-#contentTAC p {
-    padding: 5px;
-    margin-bottom: 5px;
-    line-height: 1.1em;
-}
-
+/* Sets the images to take up 50% of the article width wise, and also reduce down the height of the image so they dont look funky. Also sets the content to have padding, a amrgin and line height. */
 #bottomArticleImage,
 #imageTAC {
     -webkit-flex: 2 1 auto;
@@ -218,7 +213,15 @@ article {
     height: 50%;
 }
 
+#bottomArticleContent p,
+#contentTAC p {
+    padding: 5px;
+    margin-bottom: 5px;
+    line-height: 1.1em;
+}
+
 /* Section */
+/* Makes the section become a flex-box-container, also gives it a custom background, have a width and a different font size and a text indent. Also the h2 becomes centered. */
 section {
     display: -webkit-flex;
     -webkit-flex-flow: column wrap;

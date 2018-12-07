@@ -25,7 +25,7 @@
       <link rel="stylesheet" href="print.css" media="print">
 </head>
 
-<body>
+<body onload="screen()">
       <!-- Image for mobile viewport and print media, and information for print. -->
       <img src="Images/jb_logo.png" alt="" id="mobileLogo" class="hide">
       <div class="hide printUnHide">
@@ -39,9 +39,11 @@
             </br>
       </div>
       <header id="header">
-            <!-- NavIcon to display and hide the nav and header information. -->
-            <button id="navIcon" class="hide" onclick="navShow()"><img src="Images/jb_navicon.png" alt=""></button>
-            <button onclick="navHide()" id="navX" class="hide">X</button>
+            <div id="navIcon" class="navIcon">
+                  <!-- NavIcon to display and hide the nav and header information. -->
+                  <button id="navIcon" class="hide" onclick="navShow()"><img src="Images/jb_navicon.png" alt=""></button>
+                  <button onclick="navHide()" id="navX" class="hide">X</button>
+            </div>
             <!-- Holds all the header content. Also the Jersey Buoys Surfing School Logo. -->
             <div id="headerFlex">
                   <img src="Images/jb_logo.png" alt="Jersey Buoys Surfing School Logo" id="headerImg">
@@ -115,12 +117,12 @@
                                     <button class="navDropButton">staff</button>
                               </div>
                         </nav>
-                        <button onclick="navHide()" id="navXB" class="flexItem11A hide">^</button>
+                        <button onclick="navHide()" id="navXB" class="flexItem11A hide navIcon">^</button>
                   </div>
             </div>
       </header>
+      <!-- This holds the main content of the webpage, it is split up into 4 different section in a 2x2 grid. Their is a 2 content boxes and 2 images. They are all in flex boxes. -->
       <article id="mobileTop">
-            <!-- <img src="Images/jb_image01.png" alt="" id="articleTopImage"> -->
             <div id="topArticleContent">
                   <div id="contentTAC">
                         <p>Come enjoy the excitement of riding the waves along the Jersey Shore with Jersey Buoys.
@@ -145,8 +147,10 @@
                   </div>
             </div>
       </article>
+      <!-- Adds a space when the page is printed -->
       </br class="printUnHide">
       <section>
+            <!-- A dl list to list each surfer term then what it means. Each term and definition is in their own flex box. -->
             <h2>Surfer Slang</h2>
             <dl>
                   <div class="dlListBoxes">
@@ -187,9 +191,11 @@
                   </div>
             </dl>
       </section>
+      <!-- A footer with a fancy horozontial rule -->
       <footer>
             <hr>
       </footer>
+      <!-- Link to the javascript sheet. -->
       <script src="jb_javaScript.js"></script>
 </body>
 
