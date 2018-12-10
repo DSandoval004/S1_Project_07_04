@@ -251,6 +251,7 @@ section h2 {
 }
 
 /* Description List */
+/* Sets the Descrition list boxes, where the descrition term and the descrition definition are shown, to have a border, and background with RGBA so that it is slightly opaque. Then set the font size of the dd and dt. */
 .dlListBoxes {
     border: 1px solid black;
     width: 80%;
@@ -269,6 +270,7 @@ section dt {
 }
 
 /* bottom hr */
+/* Make the footer box an flex box, with an order of 100 so it appears on the bottom, the gave it a fancy looking hr. */
 footer {
     -webkit-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -276,7 +278,6 @@ footer {
     order: 100;
     -webkit-order: 100;
 }
-
 
 footer hr {
     margin-top: 25px;
@@ -304,20 +305,26 @@ footer hr:after {
     Mobile Styles: 0px to 480px 
     ===============================
 */
+/* These style only appear when the screen has a width of 480px max. */
 @media only screen and (max-width: 480px) {
+
+    /* Changes the width of the of the body to 100% so it takes up the whole screen. */
     html body {
         width: 100%;
     }
 
+    /* Changes the way it shows the flex boxes to apear in a column. */
     div#headerInfo {
         flex-flow: column;
         -webkit-flex-flow: column wrap;
     }
 
+    /* Gets ride of the background image on the header. */
     header div#headerFlex {
         background-image: none;
     }
 
+    /* Hides the header img, section, the right part of the header and button to hide the navicon X. */
     #headerImg,
     section,
     div#headerRight,
@@ -325,6 +332,7 @@ footer hr:after {
         display: none;
     }
 
+    /* Gives the two nav X a margin, padding, font size, width, height and a custom font color. */
     #navX,
     #navXB {
         margin: 5px;
@@ -335,6 +343,7 @@ footer hr:after {
         color: rgb(187, 215, 235);
     }
 
+    /* Shows the logo, navicon and NavXB for mobile */
     #mobileLogo,
     #navIcon,
     #navXB {
@@ -342,6 +351,7 @@ footer hr:after {
         display: block;
     }
 
+    /* Gives the header right an image for the background, and change the order to rows, and the width to 50%. */
     div#headerRight {
         background-image: url(Images/jb_back3.png);
         -webkit-flex-flow: row wrap;
@@ -349,6 +359,7 @@ footer hr:after {
         width: 50%;
     }
 
+    /* Changes the margin and gave it a min height, change the font size of owner, headerInfo paragraph. */
     .headerInfo {
         margin: 10px;
         min-height: 140px;
@@ -362,14 +373,11 @@ footer hr:after {
         font-size: 1.25em;
     }
 
+    /* Makes the topNavBar and topArticleContent, bottomArticle to have a flex flow of column. Then gave topNavFlex to have a margin of 2px. */
     #topNavBar {
         flex-flow: column;
         -webkit-flex-flow: column wrap;
         width: 50%;
-    }
-
-    .topNavFlex {
-        margin: 2px;
     }
 
     #topArticleContent,
@@ -378,6 +386,11 @@ footer hr:after {
         -webkit-flex-flow: column wrap;
     }
 
+    .topNavFlex {
+        margin: 2px;
+    }
+
+    /* Puts bottomArticleContent, contentTAC to the bottom of the flex boxes that they are in. */
     #bottomArticleContent,
     #contentTAC {
         order: 99;
@@ -386,6 +399,7 @@ footer hr:after {
         width: 94%;
     }
 
+    /* Changes the size of bottomArticleImage and imageTAC and gave them a margin so they would be in the middle. */
     #bottomArticleImage,
     #imageTAC {
         margin: 5px auto;
@@ -399,14 +413,13 @@ footer hr:after {
     Tablet Styles: 481px to 768px 
     ===============================
 */
+/* These style only appear when the screen has a width of 481px min. */
 @media only screen and (min-width: 481px) {
+
+    /* Puts the header info and topArticleContent, bottomArticle back to a flex flow of column. */
     div#headerInfo {
         flex-flow: column;
         -webkit-flex-flow: column wrap;
-    }
-
-    #navIcon {
-        display: none;
     }
 
     #topArticleContent,
@@ -415,6 +428,12 @@ footer hr:after {
         -webkit-flex-flow: column wrap;
     }
 
+    /* Hides the navIcon. */
+    #navIcon {
+        display: none;
+    }
+
+    /* Changes the order and width of bottomArticleContent, contentTAC. */
     #bottomArticleContent,
     #contentTAC {
         order: 99;
@@ -423,6 +442,7 @@ footer hr:after {
         width: 94%;
     }
 
+    /* Put the width and heignt to 98% on bottomArticleImage, imageTAC */
     #bottomArticleImage,
     #imageTAC {
         margin: 5px auto;
@@ -436,7 +456,10 @@ footer hr:after {
     Desktop Styles: 769px and greater 
     =================================
 */
+/* These style only appear when the screen has a width of 769px min. */
 @media only screen and (min-width: 769px) {
+
+    /* Put the flex flow back to row for div headerInfo, topArticleContent and bottomArticle. */
     div#headerInfo {
         flex-flow: row;
         -webkit-flex-flow: row wrap;
@@ -448,6 +471,7 @@ footer hr:after {
         -webkit-flex-flow: row wrap;
     }
 
+    /* Changes the width to 33.33% for bottomArticleContent, contentTAC. Then put the bottomArticleImage and imageTAC to a width and height of 50%. */
     #bottomArticleContent,
     #contentTAC {
         margin: 5px;
@@ -461,6 +485,7 @@ footer hr:after {
         height: 50%;
     }
 
+    /* Then changed the order of bottomArticleImage and imageTAC. */
     #imageTAC,
     #bottomArticleContent {
         order: 99;
